@@ -1,0 +1,54 @@
+/* Custom styles */
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom carousel styles */
+.carousel-container {
+  overflow: hidden;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  #carousel .w-1\/4 {
+    width: 100% !important;
+  }
+}
+
+/* Custom button hover effects */
+.btn-primary {
+  background-color: #16a34a;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #15803d;
+  transform: translateY(-1px);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Loading animation */
+.loading {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
