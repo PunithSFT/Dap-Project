@@ -22,7 +22,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
               <Car className="h-8 w-8 text-green-600" />
-              <span className="font-bold text-xl text-gray-800">Sri Lanka Tours</span>
+              <span className="font-bold text-xl text-gray-800">Tripcey</span>
             </Link>
           </div>
 

@@ -17,14 +17,57 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Main Story Section */}
+      {/* Premium Transportation Section */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="relative w-80 h-80 mx-auto lg:mx-0 mb-8 lg:mb-0">
                 <Image
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                  src="Res/Car.jpg"
+                  alt="Luxury Toyota Premio 2015"
+                  fill
+                  className="rounded-lg object-cover border-8 border-green-100"
+                />
+              </div>
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Premium Transportation</h2>
+              <div className="space-y-4 text-gray-700">
+                <p>
+                  Experience comfort and elegance in our meticulously maintained Luxury Toyota Premio 2010. Our vehicle
+                  is regularly serviced and maintained to the highest standards to ensure your safety and comfort
+                  throughout your journey.
+                </p>
+                <h3 className="text-xl font-semibold text-gray-900">Comfort Features</h3>
+                <ul className="list-disc list-inside">
+                  <li>Premium seating</li>
+                  <li>Dual-zone climate control</li>
+                </ul>
+                <h3 className="text-xl font-semibold text-gray-900">Modern Amenities</h3>
+                <ul className="list-disc list-inside">
+                  <li>Advanced GPS navigation</li>
+                  
+                </ul>
+                <h3 className="text-xl font-semibold text-gray-900">Safety & Maintenance</h3>
+                <ul className="list-disc list-inside">
+                  <li>Regular professional maintenance</li>
+                  <li>24/7 roadside assistance</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* My Journey in Sri Lankan Tourism Section */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="relative w-80 h-80 mx-auto lg:mx-0 mb-8 lg:mb-0">
+                <Image
+                  src="/Res/Me.JPG"
                   alt="Professional Chauffeur Guide"
                   fill
                   className="rounded-full object-cover border-8 border-green-100"
@@ -35,19 +78,20 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">My Journey in Sri Lankan Tourism</h2>
               <div className="space-y-4 text-gray-700">
                 <p>
-                  Welcome to my world of Sri Lankan hospitality! My name is [Your Name], and I have been privileged to
-                  serve as a professional chauffeur guide for over 20 years, sharing the incredible beauty and rich
-                  culture of my beloved homeland with visitors from around the globe.
+                  Welcome to my world of Sri Lankan hospitality! My name is Priyantha Mangala, and for over 20 years, I have
+                  dedicated myself to showcasing the breathtaking beauty of Sri Lanka as a professional chauffeur guide.
+                  Working extensively with prestigious 5-star hotels, I have had the privilege of guiding countless
+                  visitors through our vibrant culture and stunning landscapes.
                 </p>
                 <p>
-                  What started as a passion for meeting people from different cultures has evolved into a lifelong
-                  commitment to providing exceptional travel experiences. Over the years, I have had the honor of
-                  guiding more than 100,000 satisfied travelers, each with their own unique story and travel dreams.
+                  My journey began with a deep passion for sharing the rich heritage of my homeland. This passion has
+                  grown into a commitment to delivering unparalleled travel experiences, blending luxury, comfort, and
+                  personalized service. With every trip, I aim to create lasting memories for my guests.
                 </p>
                 <p>
-                  My trusty companion on these journeys is my pearl white Toyota Premio 2010 – a reliable, comfortable,
-                  and well-maintained vehicle that has covered countless miles across this beautiful island, ensuring
-                  safe and comfortable travels for all my guests.
+                  My trusty companion on these journeys is my pearl white Luxury Toyota Premio 2010 – a reliable,
+                  comfortable, and meticulously maintained vehicle that ensures safe and enjoyable travels across our
+                  beautiful island.
                 </p>
               </div>
             </div>
@@ -66,7 +110,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card>
               <CardContent className="pt-6 text-center">
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="bg-green-100 w-16 felt h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Clock className="h-8 w-8 text-green-600" />
                 </div>
                 <h3 className="text-3xl font-bold text-gray-900 mb-2">20+</h3>
@@ -149,7 +193,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Comfortable Travel</h3>
                 <p className="text-gray-600">
-                  Well-maintained Toyota Premio 2010 with air conditioning, comfortable seating, and all modern
+                  Well-maintained Luxury Toyota Premio 2015 with air conditioning, comfortable seating, and all modern
                   amenities for a pleasant journey.
                 </p>
               </CardContent>

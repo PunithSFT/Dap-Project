@@ -26,7 +26,7 @@ export default function ContactPage() {
 
   const handleWhatsApp = () => {
     const message = `Hello! I'm interested in your chauffeur guide services in Sri Lanka. Could you please provide more information?`
-    const whatsappUrl = `https://wa.me/94771234567?text=${encodeURIComponent(message)}`
+    const whatsappUrl = `https://wa.me/9476614017?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, "_blank")
   }
 
@@ -76,7 +76,7 @@ export default function ContactPage() {
                       <Phone className="h-5 w-5 text-blue-600 mr-2" />
                       <h3 className="font-semibold">Phone</h3>
                     </div>
-                    <p className="text-gray-600">+94 77 123 4567</p>
+                    <p className="text-gray-600">+94 76 614 0217</p>
                   </CardContent>
                 </Card>
 
@@ -86,7 +86,7 @@ export default function ContactPage() {
                       <Mail className="h-5 w-5 text-blue-600 mr-2" />
                       <h3 className="font-semibold">Email</h3>
                     </div>
-                    <p className="text-gray-600">info@srilankaguide.com</p>
+                    <p className="text-gray-600">mangalapayagala@gmail.com</p>
                   </CardContent>
                 </Card>
               </div>
@@ -153,7 +153,7 @@ export default function ContactPage() {
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+94 76 614 0217"
                     />
                   </div>
 

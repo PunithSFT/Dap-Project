@@ -1,69 +1,58 @@
 "use client"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogDescription } from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { MapPin, Clock } from "lucide-react"
 import Link from "next/link"
 
-interface Package {
-  id: number
-  name: string
-  image: string
-  duration: string
-  price: string
-  description: string
-  highlights: string[]
-  mapUrl: string
-}
-
-const packages: Package[] = [
+const packages = [
   {
     id: 1,
     name: "Cultural Triangle Tour",
     image:
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/e/e6/Sigiriya_%28141688197%29.jpeg",
     duration: "3 Days",
     price: "-",
-    description: "Explore the ancient cities of Anuradhapura, Polonnaruwa, and the magnificent Sigiriya Rock Fortress with a professional chauffeur guide in a Luxury Toyota Premio 2015.",
+    description: "Explore the ancient cities of Anuradhapura, Polonnaruwa, and the magnificent Sigiriya Rock Fortress.",
     highlights: ["Sigiriya Rock Fortress", "Polonnaruwa Ancient City", "Anuradhapura Sacred City"],
     mapUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126743.58164760513!2d80.7718068!3d7.9403308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afb06b073f0c9c7%3A0x2c63e344ab9a7536!2sSigiriya!5e0!3m2!1sen!2slk!4v1635000000000!5m2!1sen!2slk",
-  },
+"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.404984366143!2d80.75768207615486!3d7.957032692067544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afca15b724c9ab3%3A0xab1771275b370d52!2sSigiriya!5e0!3m2!1sen!2slk!4v1751437297787!5m2!1sen!2slk",  
+},
   {
     id: 2,
     name: "Hill Country Adventure",
     image:
-      "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
+      "https://images.squarespace-cdn.com/content/v1/5a3bb03b4c326d76de73ddaa/9732566d-6b33-4a1a-ba0c-1b73ed8848a4/The+Common+Wanderer-9888.jpg",
     duration: "4 Days",
     price: "-",
     description:
-      "Experience the cool climate and stunning landscapes of Sri Lanka's hill country including Kandy, Nuwara Eliya, and Ella, with comfortable travel in a Luxury Toyota Premio 2015.",
+      "Experience the cool climate and stunning landscapes of Sri Lanka's hill country including Kandy, Nuwara Eliya, and Ella.",
     highlights: ["Temple of the Tooth - Kandy", "Tea Plantations - Nuwara Eliya", "Nine Arch Bridge - Ella"],
     mapUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126743.58164760513!2d80.6418068!3d7.2903308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae366266498acd3%3A0x411a3818a1e2039c!2sKandy!5e0!3m2!1sen!2slk!4v1635000000000!5m2!1sen!2slk",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126743.58164760513!2d80.7718068!3d7.2403308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae366266498acd3%3A0x411a3818a1e2039c!2sKandy!5e0!3m2!1sen!2slk!4v1635000000000!5m2!1sen!2slk",
   },
   {
     id: 3,
     name: "Southern Coast Explorer",
     image:
-      "https://images.unsplash.com/photo-1586500036706-41963de24d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "https://sahashrithtravel.files.wordpress.com/2021/12/coco.jpg?w=1024",
     duration: "3 Days",
     price: "-",
     description:
-      "Discover the beautiful southern coast with its pristine beaches, historic Galle Fort, and wildlife at Yala National Park, chauffeured in a Luxury Toyota Premio 2015.",
+      "Discover the beautiful southern coast with its pristine beaches, historic Galle Fort, and wildlife at Yala National Park.",
     highlights: ["Galle Dutch Fort", "Mirissa Beach", "Yala National Park Safari"],
     mapUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126743.58164760513!2d80.2718068!3d6.0403308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae173bb6932fce3%3A0x4a35b903f9c64c03!2sGalle!5e0!3m2!1sen!2slk!4v1635000000000!5m2!1sen!2slk",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15873.25074743667!2d80.4537820160696!3d5.951582504526975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae13fce3177dc59%3A0xa2d8a78b36dc9c90!2sMirissa!5e0!3m2!1sen!2slk!4v1751437399554!5m2!1sen!2slk",
   },
   {
     id: 4,
     name: "Complete Island Tour",
     image:
-      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        "https://srilankatravelpages.com/my_content/uploads/2023/07/Sri-Lanka-Travel.jpg",
     duration: "7 Days",
     price: "-",
     description:
-      "The ultimate Sri Lankan experience covering cultural sites, hill country, beaches, and wildlife in one comprehensive tour, with luxury transport in a Toyota Premio 2015.",
+      "The ultimate Sri Lankan experience covering cultural sites, hill country, beaches, and wildlife in one comprehensive tour.",
     highlights: ["All major cultural sites", "Hill country tea estates", "Beach relaxation", "Wildlife safari"],
     mapUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2021196.5651848456!2d79.6129707!3d7.8731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2593cf65a1e9d%3A0xe13da4b400e2d38c!2sSri%20Lanka!5e0!3m2!1sen!2slk!4v1635000000000!5m2!1sen!2slk",
@@ -72,27 +61,26 @@ const packages: Package[] = [
     id: 5,
     name: "Wildlife & Nature Tour",
     image:
-      "https://images.unsplash.com/photo-1549366021-9f761d040a94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+         "https://www.lovesrilanka.org/wp-content/uploads/2020/06/LSL_B2_Yala-National-Park_1920x700.jpg",
     duration: "4 Days",
     price: "-",
     description:
-      "Perfect for nature lovers, featuring multiple national parks and wildlife sanctuaries across the island, with comfortable travel in a Luxury Toyota Premio 2015.",
+      "Perfect for nature lovers, featuring multiple national parks and wildlife sanctuaries across the island.",
     highlights: ["Yala National Park", "Udawalawe Elephant Park", "Sinharaja Rainforest"],
     mapUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126743.58164760513!2d81.3718068!3d6.3703308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae69e3c0b1e6b1f%3A0x8c1a02b1a1e2039c!2sYala%20National%20Park!5e0!3m2!1sen!2slk!4v1635000000000!5m2!1sen!2slk",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.454499787585!2d81.46930977614423!3d6.463961293527656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae5d3a62ffb9359%3A0x3bb623d70b5a3314!2sYala%20National%20Park!5e0!3m2!1sen!2slk!4v1751437520591!5m2!1sen!2slk"
   },
   {
     id: 6,
     name: "Spiritual Journey",
     image:
-      "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
+         "https://live.staticflickr.com/7466/16344616755_a516594ea7_h.jpg",
     duration: "5 Days",
     price: "-",
-    description:
-      "A spiritual journey through Sri Lanka's most sacred Buddhist and Hindu temples and pilgrimage sites, chauffeured in a Luxury Toyota Premio 2015.",
+    description: "A spiritual journey through Sri Lanka's most sacred Buddhist and Hindu temples and pilgrimage sites.",
     highlights: ["Temple of the Tooth", "Adam's Peak", "Kataragama Temple"],
     mapUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126743.58164760513!2d80.6418068!3d7.2903308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae366266498acd3%3A0x411a3818a1e2039c!2sKandy!5e0!3m2!1sen!2slk!4v1635000000000!5m2!1sen!2slk",
+         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63162.7846845757!2d80.36211410029347!3d8.335149725393949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afcf4f99360e159%3A0xc111fe9ebc6dcf0e!2sAnuradhapura!5e0!3m2!1sen!2slk!4v1751437614703!5m2!1sen!2slk"
   },
 ]
 
@@ -134,7 +122,6 @@ export default function PackagesPage() {
                     <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
                       <DialogHeader>
                         <DialogTitle className="text-2xl">{pkg.name}</DialogTitle>
-                        <DialogDescription>Explore the details of this {pkg.name} package.</DialogDescription>
                       </DialogHeader>
                       <div className="grid md:grid-cols-2 gap-6">
                         <div>

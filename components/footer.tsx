@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <Car className="h-8 w-8 text-green-400" />
-              <span className="font-bold text-xl sm:text-xl">Sri Lanka Tours</span>
+              <span className="font-bold text-xl sm:text-xl">Tripcey</span>
             </div>
             <p className="text-gray-300 text-sm sm:text-base mb-4">
               Your trusted chauffeur guide for exploring the beautiful island of Sri Lanka. 20+ years of experience in
@@ -62,9 +62,8 @@ export default function Footer() {
               <li>Cultural Triangle Tours</li>
               <li>Hill Country Adventures</li>
               <li>Beach & Wildlife Tours</li>
-              <li>Airport Transfers</li>
               <li>Custom Tour Packages</li>
-              <li>Hotel Bookings</li>
+
             </ul>
           </div>
 
@@ -73,11 +72,11 @@ export default function Footer() {
             <div className="space-y-3 text-center sm:text-left">
               <div className="flex items-center justify-center sm:justify-start">
                 <Phone className="h-4 w-4 mr-2 text-green-400" />
-                <span className="text-gray-300 text-sm sm:text-base">+94 77 123 4567</span>
+                <span className="text-gray-300 text-sm sm:text-base">+94 76 614 0217</span>
               </div>
               <div className="flex items-center justify-center sm:justify-start">
                 <Mail className="h-4 w-4 mr-2 text-green-400" />
-                <span className="text-gray-300 text-sm sm:text-base">info@srilankaguide.com</span>
+                <span className="text-gray-300 text-sm sm:text-base">mangalapayagala@gmail.com</span>
               </div>
               <div className="flex items-start justify-center sm:justify-start">
                 <MapPin className="h-4 w-4 mr-2 text-green-400 mt-1" />
