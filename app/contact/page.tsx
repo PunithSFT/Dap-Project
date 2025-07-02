@@ -26,7 +26,7 @@ export default function ContactPage() {
 
   const handleWhatsApp = () => {
     const message = `Hello! I'm interested in your chauffeur guide services in Sri Lanka. Could you please provide more information?`
-    const whatsappUrl = `https://wa.me/9476614017?text=${encodeURIComponent(message)}`
+    const whatsappUrl = `https://wa.me/94766140217?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, "_blank")
   }
 
